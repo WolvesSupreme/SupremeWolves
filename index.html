@@ -48,10 +48,28 @@
                             </li>
                         </ul>
                     </nav>
-
                 </div>
             </header>
+            <div class="switch">    
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <div class="slider round"></div>
+                </label>
+                <small>CambiarColor</small>
+            </div>  
+            <script>
+                const colorSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
+                function switchColor(e) {
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                    }
+                }
+                colorSwitch.addEventListener('change', switchColor, false);
+
+            </script>
             <section class="slide-wrap"></div>
                 <ul class="slider1">
                     <li><img src="img/silber/imag1.png" alt="Imagen de BlackWolf"></li>
@@ -102,6 +120,34 @@
 
     </section>
     <div class="clearfix-padding"></div> 
+
+    <!----- REDES SOCIALES ---->
+    <div class="sociales">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/StuwarGironGarcia" target="_blank" class="icon-facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/braymstuwar" target="_blank" class="icon-twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/stuwargg/" target="_blank" class="icon-instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:rey_lodcat@outlook.es" class="icon-mail">
+                    <i class="fa fa-envelope-o"></i>
+                </a>
+            </li>
+            
+        </ul>
+
+    </div>
 
 
     <!----- PORFOLIO ---->  
